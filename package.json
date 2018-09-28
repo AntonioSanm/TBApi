@@ -1,0 +1,27 @@
+{
+  "name": "tbapi",
+  "version": "1.0.0",
+  "description": "Api for recruitment proccess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioSanm/TBApi.git"
+  },
+  "author": "Antonio Sanmartín",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioSanm/TBApi/issues"
+  },
+  "homepage": "https://github.com/AntonioSanm/TBApi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.18"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
