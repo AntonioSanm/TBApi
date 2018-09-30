@@ -1,8 +1,7 @@
 var Mongoose = require('mongoose'),
-    dev_db_url = 'mongodb://localhost:27017/workers',
-    mongoDB = process.env.MONGODB_URI || dev_db_url;
+    dev_db_url = 'mongodb://mongoDB/workers';
 
-Mongoose.connect(mongoDB);
+Mongoose.connect(dev_db_url);
 Mongoose.Promise = global.Promise;
 
 var db = Mongoose.connection;

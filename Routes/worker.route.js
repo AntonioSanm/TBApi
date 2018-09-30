@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Require the controllers WHICH WE DID NOT CREATE YET!!
-const worker_controller = require('../Controllers/worker.controller');
-
-
-// a simple test url to check that all of our files are communicating correctly.
+const worker_controller = require('../controllers/worker.controller');
 
 router.post('/create', worker_controller.product_create);
 router.get('/:id', worker_controller.product_read);
