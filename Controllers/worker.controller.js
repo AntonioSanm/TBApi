@@ -1,14 +1,14 @@
-const Product = require('../models/worker.model');
+var Worker = require('../models/worker.model');
 
-exports.product_create = function (req, res, next) {
-    var product = new Product(
+exports.worker_create = function (req, res, next) {
+    var worker = new Worker(
         {
-            name: req.body.name,
-            age: req.body.age
+            availability: req.body.availability,
+            payrate: req.body.payrate
         }
     );
 
-    product.save(function (err) {
+    worker.save(function (err) {
         if (err) {
             return next(err);
         }
@@ -16,23 +16,23 @@ exports.product_create = function (req, res, next) {
     })
 };
 
-exports.product_read = function (req, res, next) {
-    Product.findById(req.params.id, function (err, product, next) {
+exports.worker_read = function (req, res, next) {
+    Worker.findById(req.params.id, function (err, worker) {
         if (err) return next(err);
-        res.send(product);
+        res.send(worker);
     })
 };
 
-exports.product_update = function (req, res, next) {
-    Product.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+exports.worker_update = function (req, res, next) {
+    Worker.findByIdAndUpdate(req.params.id, {$set: req.body }, function (err, worker) {
         if (err) return next(err);
-        res.send('Worker udpated.');
+        res.send('Worker udpated.' + worker);
     });
 };
 
-exports.product_delete = function (req, res, next) {
-    Product.findByIdAndRemove(req.params.id, function (err) {
+exports.worker_delete = function (req, res, next) {
+    Worker.findByIdAndRemove(req.params.id, function (err, worker) {
         if (err) return next(err);
-        res.send('Deleted successfully!');
+        res.send('Deleted successfully!' + worker);
     })
 };

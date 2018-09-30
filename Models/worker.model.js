@@ -2,7 +2,7 @@ var Mongoose = require('../database').Mongoose,
     Schema = Mongoose.Schema;
 
 var WorkerSchema = new Schema({
-    availability: {type: Array},
+    availability : [{type: String}],
     payrate: {type: Number}
 });
 
