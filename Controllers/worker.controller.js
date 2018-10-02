@@ -1,6 +1,7 @@
 var Joi = require('joi');
 var Worker = require('../models/worker.model');
 var workersShiftsSchema = require('../schemas/workershift.schema');
+var matchingService = require('../services/matching.service');
 
 
 exports.worker_matching = function (req, res, next) {
@@ -11,9 +12,8 @@ exports.worker_matching = function (req, res, next) {
             return next(err.message);
 
         } else {
-
             
-            res.send('ok');
+            res.send(matchingService.matching(req.body));
 
         }
 
