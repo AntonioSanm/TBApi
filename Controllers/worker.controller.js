@@ -1,4 +1,25 @@
+var Joi = require('joi');
 var Worker = require('../models/worker.model');
+var workersShiftsSchema = require('../schemas/workershift.schema');
+
+
+exports.worker_matching = function (req, res, next) {
+
+    Joi.validate(req.body, workersShiftsSchema, (err) => {
+        if (err) { 
+
+            return next(err.message);
+
+        } else {
+
+            
+            res.send('ok');
+
+        }
+
+    });
+    
+};
 
 exports.worker_create = function (req, res, next) {
     var worker = new Worker(
