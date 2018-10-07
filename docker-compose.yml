@@ -5,13 +5,8 @@ services:
     restart: always
     build: .
     ports:
-      - "8888:8888"
+      - "8000:8000"
     links:
-      - mongoDB
-  mongoDB:
+      - mongodb
+  mongodb:
     image: mongo
-    container_name: mongoDB
-    volumes:
-      - ./data:/data/db
-    ports:
-      - "27017:27017"

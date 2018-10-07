@@ -3,12 +3,14 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var worker = require('./routes/worker.route');
+var shift = require('./routes/shift.route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/workers', worker);
+app.use('/shifts', shift);
 
-var port = 9000;
+var port = 8000;
 
 app.listen(port, () => {
     console.log('Server is up and running on port number ' + port);
