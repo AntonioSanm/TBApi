@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "511f7abb-62a6-4d95-aa76-5db2bb43bf25",
+		"name": "TempBuddy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Workers CRUD",
+			"item": [
+				{
+					"name": "Get all workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/workers/v3/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"workers",
+								"v3",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new worker",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/workers/v3/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"workers",
+								"v3",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update worker (by mongo id)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"payrate\": 9\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/workers/v3/update/5bba642b8d8d483f0d68cdab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"workers",
+								"v3",
+								"update",
+								"5bba642b8d8d483f0d68cdab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete worker (by mongo id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/workers/v3/delete/5bba63598d8d483f0d68cdaa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"workers",
+								"v3",
+								"delete",
+								"5bba63598d8d483f0d68cdaa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shifts CRUD",
+			"item": [
+				{
+					"name": "Get all shifts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/shifts/v3/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"shifts",
+								"v3",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new shift",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n"
+						},
+						"url": {
+							"raw": "http://localhost:8000/shifts/v3/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"shifts",
+								"v3",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update shift (by mongo id)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"day\" : [\"Tuesday\"]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/shifts/v3/update/5bba897fd932886f50aef2e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"shifts",
+								"v3",
+								"update",
+								"5bba897fd932886f50aef2e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete shift (by mongo id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/shifts/v3/delete/5bba897fd932886f50aef2e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"shifts",
+								"v3",
+								"delete",
+								"5bba897fd932886f50aef2e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matching v1 (POST worker data)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"workers\": [\n    {\n      \"id\": 1,\n      \"availability\": [\"Monday\", \"Wednesday\", \"Friday\"],\n      \"payrate\": 7.50\n    },\n    {\n      \"id\": 2,\n      \"availability\": [\"Tuesday\", \"Thursday\"],\n      \"payrate\": 9.00\n    },\n    {\n      \"id\": 3,\n      \"availability\": [\"Monday\", \"Tuesday\", \"Friday\"],\n      \"payrate\": 8.00\n    },\n    {\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n    }\n  ],\n  \"shifts\": [\n    {\n      \"id\": 1,\n      \"day\": [\"Monday\"]\n    },\n    {\n      \"id\": 2,\n      \"day\": [\"Tuesday\"]\n    },\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/workers/v1/matching",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"workers",
+						"v1",
+						"matching"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Matching v2 (POST worker data with payrate)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"workers\": [\n    {\n      \"id\": 1,\n      \"availability\": [\"Monday\", \"Wednesday\", \"Friday\"],\n      \"payrate\": 7.50\n    },\n    {\n      \"id\": 2,\n      \"availability\": [\"Tuesday\", \"Thursday\"],\n      \"payrate\": 9.00\n    },\n    {\n      \"id\": 3,\n      \"availability\": [\"Monday\", \"Tuesday\", \"Friday\"],\n      \"payrate\": 8.00\n    },\n    {\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n    }\n  ],\n  \"shifts\": [\n    {\n      \"id\": 1,\n      \"day\": [\"Monday\"]\n    },\n    {\n      \"id\": 2,\n      \"day\": [\"Tuesday\"]\n    },\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/workers/v2/matching",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"workers",
+						"v2",
+						"matching"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Matching v3 (Data from MongoDB)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/workers/v3/matching",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"workers",
+						"v3",
+						"matching"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
