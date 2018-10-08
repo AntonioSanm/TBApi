@@ -13,7 +13,7 @@ $ docker-compose up
 ```
 
 ## API Endpoints
-The port exposed is the 8000 so all petitions should be against localhost/8000. On the project folder there is a [Postman](https://www.getpostman.com/apps) collection (TempBuddy.postman_collection.json) already created with all the api enpoints, which really eases the proccess of testing them. It only needs to be imported on the app itself.
+The port exposed is the 8000 so all petitions should be against localhost/8000. On the project folder there is a [Postman](https://www.getpostman.com/apps) collection (TempBuddy.postman_collection.json) already created with all the api enpoints, which really eases the proccess of testing them. It only needs to be imported on the Postman app itself.
 
 ### POST /worker/v1/matching
 1) REQUIRED: Provide an API endpoint that receives a list of workers and a list of shifts and returns the optimal list of matchings. A list of matchings is optimal when the number of unmatched shifts is the minimum possible.
