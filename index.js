@@ -7,8 +7,8 @@ var shift = require('./routes/shift.route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/workers', worker);
-app.use('/shifts', shift);
+app.use('/worker', worker);
+app.use('/shift', shift);
 
 var port = 8000;
 

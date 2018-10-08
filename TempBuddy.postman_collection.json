@@ -15,14 +15,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8000/workers/v3/get",
+							"raw": "http://localhost:8000/worker/v3/get",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"workers",
+								"worker",
 								"v3",
 								"get"
 							]
@@ -45,14 +45,14 @@
 							"raw": "{\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8000/workers/v3/create",
+							"raw": "http://localhost:8000/worker/v3/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"workers",
+								"worker",
 								"v3",
 								"create"
 							]
@@ -75,14 +75,14 @@
 							"raw": "{\n\t\"payrate\": 9\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8000/workers/v3/update/5bba642b8d8d483f0d68cdab",
+							"raw": "http://localhost:8000/worker/v3/update/5bba642b8d8d483f0d68cdab",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"workers",
+								"worker",
 								"v3",
 								"update",
 								"5bba642b8d8d483f0d68cdab"
@@ -98,14 +98,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8000/workers/v3/delete/5bba63598d8d483f0d68cdaa",
+							"raw": "http://localhost:8000/worker/v3/delete/5bba63598d8d483f0d68cdaa",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"workers",
+								"worker",
 								"v3",
 								"delete",
 								"5bba63598d8d483f0d68cdaa"
@@ -126,14 +126,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8000/shifts/v3/get",
+							"raw": "http://localhost:8000/shift/v3/get",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"shifts",
+								"shift",
 								"v3",
 								"get"
 							]
@@ -156,14 +156,14 @@
 							"raw": "\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n"
 						},
 						"url": {
-							"raw": "http://localhost:8000/shifts/v3/create",
+							"raw": "http://localhost:8000/shift/v3/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"shifts",
+								"shift",
 								"v3",
 								"create"
 							]
@@ -186,14 +186,14 @@
 							"raw": "{\n\t\"day\" : [\"Tuesday\"]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8000/shifts/v3/update/5bba897fd932886f50aef2e4",
+							"raw": "http://localhost:8000/shift/v3/update/5bba897fd932886f50aef2e4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"shifts",
+								"shift",
 								"v3",
 								"update",
 								"5bba897fd932886f50aef2e4"
@@ -209,14 +209,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "http://localhost:8000/shifts/v3/delete/5bba897fd932886f50aef2e4",
+							"raw": "http://localhost:8000/shift/v3/delete/5bba897fd932886f50aef2e4",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8000",
 							"path": [
-								"shifts",
+								"shift",
 								"v3",
 								"delete",
 								"5bba897fd932886f50aef2e4"
@@ -242,14 +242,14 @@
 					"raw": "{\n  \"workers\": [\n    {\n      \"id\": 1,\n      \"availability\": [\"Monday\", \"Wednesday\", \"Friday\"],\n      \"payrate\": 7.50\n    },\n    {\n      \"id\": 2,\n      \"availability\": [\"Tuesday\", \"Thursday\"],\n      \"payrate\": 9.00\n    },\n    {\n      \"id\": 3,\n      \"availability\": [\"Monday\", \"Tuesday\", \"Friday\"],\n      \"payrate\": 8.00\n    },\n    {\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n    }\n  ],\n  \"shifts\": [\n    {\n      \"id\": 1,\n      \"day\": [\"Monday\"]\n    },\n    {\n      \"id\": 2,\n      \"day\": [\"Tuesday\"]\n    },\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n  ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/workers/v1/matching",
+					"raw": "http://localhost:8000/worker/v1/matching",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						"workers",
+						"worker",
 						"v1",
 						"matching"
 					]
@@ -272,14 +272,14 @@
 					"raw": "{\n  \"workers\": [\n    {\n      \"id\": 1,\n      \"availability\": [\"Monday\", \"Wednesday\", \"Friday\"],\n      \"payrate\": 7.50\n    },\n    {\n      \"id\": 2,\n      \"availability\": [\"Tuesday\", \"Thursday\"],\n      \"payrate\": 9.00\n    },\n    {\n      \"id\": 3,\n      \"availability\": [\"Monday\", \"Tuesday\", \"Friday\"],\n      \"payrate\": 8.00\n    },\n    {\n      \"id\": 4,\n      \"availability\": [\"Thursday\"],\n      \"payrate\": 12.25\n    }\n  ],\n  \"shifts\": [\n    {\n      \"id\": 1,\n      \"day\": [\"Monday\"]\n    },\n    {\n      \"id\": 2,\n      \"day\": [\"Tuesday\"]\n    },\n    {\n      \"id\": 3,\n      \"day\": [\"Wednesday\"]\n    }\n  ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/workers/v2/matching",
+					"raw": "http://localhost:8000/worker/v2/matching",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						"workers",
+						"worker",
 						"v2",
 						"matching"
 					]
@@ -294,14 +294,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:8000/workers/v3/matching",
+					"raw": "http://localhost:8000/worker/v3/matching",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						"workers",
+						"worker",
 						"v3",
 						"matching"
 					]
